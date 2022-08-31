@@ -1,0 +1,129 @@
+Last login: Tue Aug 30 14:28:58 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Iriss-MacBook-Air:~ iriskern$ git branch --set-upstream-to https://github.com/irissylvera/ExampleGitRepository.git
+fatal: not a git repository (or any of the parent directories): .git
+Iriss-MacBook-Air:~ iriskern$ git pull https://github.com/irissylvera/ExampleGitRepository.git master
+fatal: not a git repository (or any of the parent directories): .git
+Iriss-MacBook-Air:~ iriskern$ cd testproject
+-bash: cd: testproject: No such file or directory
+Iriss-MacBook-Air:~ iriskern$ cd work
+Iriss-MacBook-Air:work iriskern$ cd testproject
+Iriss-MacBook-Air:testproject iriskern$ git config --global credential.helper store
+Iriss-MacBook-Air:testproject iriskern$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+Iriss-MacBook-Air:testproject iriskern$ git status
+On branch master
+nothing to commit, working tree clean
+Iriss-MacBook-Air:testproject iriskern$ git pull https://github.com/irissylvera/ExampleGitRepository.git master
+fatal: couldn't find remote ref master
+Iriss-MacBook-Air:testproject iriskern$ open temp.txt
+Iriss-MacBook-Air:testproject iriskern$ ls
+temp.txt
+Iriss-MacBook-Air:testproject iriskern$ pwd
+/Users/iriskern/work/testproject
+Iriss-MacBook-Air:testproject iriskern$ changedirectory ..
+-bash: changedirectory: command not found
+Iriss-MacBook-Air:testproject iriskern$ change directory ..
+-bash: change: command not found
+Iriss-MacBook-Air:testproject iriskern$ change dir ..
+-bash: change: command not found
+Iriss-MacBook-Air:testproject iriskern$ pwd
+/Users/iriskern/work/testproject
+Iriss-MacBook-Air:testproject iriskern$ cd ..
+Iriss-MacBook-Air:work iriskern$ ls
+testproject
+Iriss-MacBook-Air:work iriskern$ cd work
+-bash: cd: work: No such file or directory
+Iriss-MacBook-Air:work iriskern$ cd ..
+Iriss-MacBook-Air:~ iriskern$ ls
+Applications		Documents		practice.Rmd
+DataSheetTrends.Rmd	Downloads		practice.html
+Datasheet Analysis.Rmd	Library			practice.pdf
+Desktop			Movies			testdir
+Diffusion Modeling.R	Music			work
+Diffusion Modeling.Rmd	Pictures
+Diffusion-Modeling.html	Public
+Iriss-MacBook-Air:~ iriskern$ cd work
+Iriss-MacBook-Air:work iriskern$ ls
+testproject
+Iriss-MacBook-Air:work iriskern$ cd ~/
+Iriss-MacBook-Air:~ iriskern$ ls
+Applications		Diffusion Modeling.Rmd	Movies			practice.html
+DataSheetTrends.Rmd	Diffusion-Modeling.html	Music			practice.pdf
+Datasheet Analysis.Rmd	Documents		Pictures		testdir
+Desktop			Downloads		Public			work
+Diffusion Modeling.R	Library			practice.Rmd
+Iriss-MacBook-Air:~ iriskern$ cd work
+Iriss-MacBook-Air:work iriskern$ ls
+testproject
+Iriss-MacBook-Air:work iriskern$ cd ~/
+Iriss-MacBook-Air:~ iriskern$ ls
+Applications	Documents	Library		Music		Public		work
+Desktop		Downloads	Movies		Pictures	ValentineCode
+Iriss-MacBook-Air:~ iriskern$ cd work
+Iriss-MacBook-Air:work iriskern$ ls
+testproject
+Iriss-MacBook-Air:work iriskern$ open temp.txt
+The file /Users/iriskern/work/temp.txt does not exist.
+Iriss-MacBook-Air:work iriskern$ cd testproject
+Iriss-MacBook-Air:testproject iriskern$ open temp.txt
+Iriss-MacBook-Air:testproject iriskern$ open temp.txt
+Iriss-MacBook-Air:testproject iriskern$ ls
+temp.txt
+Iriss-MacBook-Air:testproject iriskern$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   temp.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Iriss-MacBook-Air:testproject iriskern$ git add .
+Iriss-MacBook-Air:testproject iriskern$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   temp.txt
+
+Iriss-MacBook-Air:testproject iriskern$ git commit .
+Aborting commit due to empty commit message.
+Iriss-MacBook-Air:testproject iriskern$ git commit -m "reviewed making changes"
+[master 6f9bd2d] reviewed making changes
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Iriss-MacBook-Air:testproject iriskern$ git log
+commit 6f9bd2da7042b967525cf6166138c3d8d484ab67 (HEAD -> master)
+Author: Iris <irissylvera@gmail.com>
+Date:   Wed Aug 31 10:49:26 2022 -0700
+
+    reviewed making changes
+
+commit 380a2f4622101dcd8083ea9f6322e6ff4bf64e23
+Author: Iris <iriskern@uw.edu>
+Date:   Tue Aug 30 15:09:09 2022 -0700
+
+    second commit
+
+commit 6da28924c9ad177c616013ab168fb04a9a160694
+Author: Iris <iriskern@uw.edu>
+Date:   Tue Aug 30 15:00:53 2022 -0700
+
+    added text to temp.txt
+
+commit 41f368653d8fd209c02b043635ea62e285ee6f95
+Author: Iris <iriskern@uw.edu>
+Date:   Tue Aug 30 14:54:43 2022 -0700
+
+    first commit
+Iriss-MacBook-Air:testproject iriskern$ 
